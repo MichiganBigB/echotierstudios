@@ -1,0 +1,401 @@
+/* EchoTier Studios - Main Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a1a;
+    --accent-blue: #00d4ff;
+    --accent-gold: #ffd700;
+    --text-light: #f0f0f0;
+    --text-gray: #a0a0a0;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--secondary-dark);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 12px;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-blue);
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.hero h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+    letter-spacing: 3px;
+}
+
+.hero-text {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.hero-subtext {
+    font-size: 16px;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-blue);
+    color: var(--primary-dark);
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+}
+
+.dark-section {
+    background-color: var(--secondary-dark);
+}
+
+section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PHILOSOPHY SECTION */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.philosophy-item {
+    padding: 30px;
+    background-color: rgba(0, 212, 255, 0.05);
+    border-left: 4px solid var(--accent-blue);
+}
+
+.philosophy-item h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--accent-gold);
+}
+
+.philosophy-quote {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--accent-gold);
+    margin-top: 40px;
+}
+
+/* MUSIC SECTION */
+.album-category {
+    margin-bottom: 60px;
+}
+
+.album-category h3 {
+    font-size: 32px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.category-description {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.track {
+    background-color: var(--secondary-dark);
+    padding: 15px 20px;
+    border-left: 3px solid var(--accent-blue);
+    transition: all 0.3s;
+}
+
+.track:hover {
+    border-left-color: var(--accent-gold);
+    transform: translateX(5px);
+}
+
+.instrumental, .covermorph-note {
+    font-size: 12px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.coming-soon {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* COUNCIL SECTION */
+.council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.council-member {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid var(--accent-blue);
+    transition: all 0.3s;
+}
+
+.council-member:hover {
+    border-top-color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+.council-member h4 {
+    font-size: 22px;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.council-member p {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.council-note {
+    text-align: center;
+    margin-top: 50px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* NOVEL SECTION */
+.novel-preview {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 212, 255, 0.05);
+    border: 2px solid var(--accent-blue);
+}
+
+.novel-preview h3 {
+    font-size: 28px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.novel-preview p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.novel-quote {
+    font-size: 24px;
+    font-style: italic;
+    color: var(--accent-blue);
+    margin-top: 30px;
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-block {
+    padding: 30px;
+    background-color: var(--secondary-dark);
+    border-left: 4px solid var(--accent-blue);
+}
+
+.about-block h3 {
+    font-size: 28px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.about-block p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-block strong {
+    color: var(--accent-blue);
+}
+
+.divisions {
+    text-align: center;
+}
+
+.divisions h3 {
+    font-size: 32px;
+    color: var(--accent-blue);
+    margin-bottom: 30px;
+}
+
+.division-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.division {
+    padding: 20px;
+    background-color: var(--secondary-dark);
+    border: 2px solid var(--accent-blue);
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--secondary-dark);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid var(--accent-blue);
+}
+
+footer p {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    color: var(--accent-blue);
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    nav a {
+        margin: 0 15px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}

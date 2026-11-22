@@ -82,3 +82,53 @@ if (entryForm) {
         status.textContent = 'Draft download started. Your entry has not been submitted.';
     });
 }
+
+const artworkViewer = document.querySelector('#artwork-viewer');
+if (artworkViewer && typeof artworkViewer.showModal === 'function') {
+    const galleryLinks = [...document.querySelectorAll('.gallery-link')];
+    const viewerImage = document.querySelector('#artwork-image');
+    const viewerCaption = document.querySelector('#artwork-caption');
+    let selectedArtwork = 0;
+    let artworkTrigger = null;
+
+    const showArtwork = index => {
+        selectedArtwork = (index + galleryLinks.length) % galleryLinks.length;
+        const link = galleryLinks[selectedArtwork];
+        viewerImage.src = link.href;
+        viewerImage.alt = link.dataset.caption;
+        viewerCaption.textContent = `${link.dataset.caption} · ${selectedArtwork + 1} of ${galleryLinks.length}`;
+    };
+
+    galleryLinks.forEach((link, index) => {
+        link.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            artworkTrigger = link;
+            showArtwork(index);
+            artworkViewer.showModal();
+            document.documentElement.classList.add('artwork-is-open');
+        });
+    });
+    document.querySelector('#artwork-close').addEventListener('click', () => artworkViewer.close());
+    document.querySelector('#artwork-previous').addEventListener('click', () => showArtwork(selectedArtwork - 1));
+    document.querySelector('#artwork-next').addEventListener('click', () => showArtwork(selectedArtwork + 1));
+    artworkViewer.addEventListener('close', () => {
+        document.documentElement.classList.remove('artwork-is-open');
+        viewerImage.removeAttribute('src');
+        if (artworkTrigger) artworkTrigger.focus();
+    });
+    artworkViewer.addEventListener('click', event => {
+        if (event.target === artworkViewer) artworkViewer.close();
+    });
+    artworkViewer.addEventListener('keydown', event => {
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            showArtwork(selectedArtwork + 1);
+        }
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            showArtwork(selectedArtwork - 1);
+        }
+    });
+}

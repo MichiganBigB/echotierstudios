@@ -158,7 +158,7 @@ textarea { resize: vertical; }
     .brand-small { display: inline; }
     .js .menu-toggle { display: inline-flex; }
     nav { width: 100%; padding-block: 1rem; gap: .5rem 1.4rem; }
-    .js nav:not(.is-open) { display: none; }
+    .js #site-nav:not(.is-open) { display: none; }
     nav a { font-size: 1rem; }
     .hero { min-height: 660px; }
     .hero-content { padding-block: 5rem; }
@@ -198,4 +198,93 @@ textarea { resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; }
+}
+
+/* Cast profiles and production artwork */
+.cast-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin-top: 2rem;
+}
+.cast-jump-links a { color: var(--gold); font-size: .95rem; }
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 3.5rem 2rem;
+    padding-top: 1rem;
+}
+.cast-card { min-width: 0; }
+.cast-portrait {
+    display: block;
+    background: #302d2b;
+    overflow: hidden;
+}
+.cast-portrait img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+    transition: transform .25s;
+}
+.cast-portrait:hover img { transform: scale(1.025); }
+.cast-copy { padding-top: 1.5rem; }
+.cast-copy .eyebrow { font-size: .75rem; margin-bottom: .8rem; }
+.cast-copy h2 { font-size: 2.7rem; }
+.cast-copy > p:not(.eyebrow) { margin-top: 1rem; color: var(--muted); }
+.cast-studies { margin-top: 1.5rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.cast-studies summary { font: 600 .95rem/1.5 var(--body); color: var(--gold); }
+.study-grid { display: grid; gap: 1.5rem; padding-top: 1.5rem; }
+.study-grid figure, .production-grid figure { margin: 0; min-width: 0; }
+.study-grid figcaption, .production-grid figcaption { margin-top: .6rem; font-size: .8rem; }
+.study-image { display: block; }
+.study-image img { width: 100%; height: auto; }
+.gallery-link { cursor: zoom-in; }
+.production-details { margin-top: 2rem; padding-block: 1.5rem; border-block: 1px solid var(--line); }
+.production-details summary { font-size: 2rem; }
+.production-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+.production-grid img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--panel); }
+.cast-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.cast-preview a { text-decoration: none; }
+.cast-preview img { aspect-ratio: 2 / 3; height: auto; object-fit: contain; background: #302d2b; }
+.cast-preview span { display: block; font: 600 1.7rem/1.3 var(--display); padding-top: 1rem; }
+.cast-preview a:hover span { color: var(--gold); }
+.artwork-is-open { overflow: hidden; }
+.artwork-viewer {
+    width: min(1200px, 95vw);
+    max-width: 95vw;
+    max-height: 95dvh;
+    padding: 1.2rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+}
+.artwork-viewer::backdrop { background: #050a0ded; }
+.viewer-controls { display: flex; gap: .75rem; justify-content: flex-end; padding-bottom: 1rem; }
+.viewer-controls .button { min-height: 44px; padding: .5rem 1rem; }
+.artwork-viewer figure { margin: 0; }
+.artwork-viewer img { width: 100%; max-height: 72dvh; object-fit: contain; }
+.artwork-viewer figcaption { margin-top: .8rem; text-align: center; }
+@media (max-width: 1000px) {
+    .cast-grid, .production-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #site-nav { gap: .65rem; }
+    #site-nav a { font-size: .8rem; }
+}
+@media (max-width: 760px) {
+    #site-nav a { font-size: 1rem; }
+    .cast-grid { gap: 2.5rem 1.25rem; }
+    .cast-copy h2 { font-size: 2.2rem; }
+    .cast-copy .eyebrow { letter-spacing: .09em; }
+    .cast-preview { gap: 1rem; }
+    .cast-preview span { font-size: 1.3rem; }
+    .production-grid { gap: 1.5rem; }
+    .cast-jump-links { width: auto; padding: 0; }
+}
+@media (max-width: 520px) {
+    .cast-grid, .production-grid { grid-template-columns: 1fr; }
+    .cast-grid { gap: 3.5rem; }
+    .cast-copy h2 { font-size: 2.8rem; }
+    .viewer-controls { justify-content: center; }
+    .viewer-controls .button { padding-inline: .8rem; }
 }

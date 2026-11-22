@@ -1,140 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EchoTier Studios | Digi Awards</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>ECHOTIER STUDIOS</h1>
-                <p class="tagline">Technology That Liberates</p>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#101719">
+        <title>The Digi Awards | EchoTier Studios</title>
+        <meta name="description" content="Directed, Inventive, Guided Inspiration. Explore the Digi Awards concept and prepare an entry draft.">
+        <meta property="og:title" content="The Digi Awards | EchoTier Studios">
+        <meta property="og:description" content="Directed, Inventive, Guided Inspiration. Explore the Digi Awards concept and prepare an entry draft.">
+        <meta property="og:type" content="website">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="site.js" defer></script>
+    </head>
+    <body>
+        <a class="skip" href="#main">Skip to content</a>
+        <header class="site-header">
+            <div class="wrap header-inner">
+                <a class="brand" href="index.html" aria-label="EchoTier Studios home">
+                    <span class="brand-name">ECHO<span>TIER</span>
+                    </span>
+                    <span class="brand-small">STUDIOS</span>
+                </a>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+                <nav id="site-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="unfiltered.html">UNfiltered</a>
+                    <a href="hollywood.html">Hollywood 8.0</a>
+                    <a href="digi-awards.html" aria-current="page">Digi Awards</a>
+                    <a href="studio.html">The studio</a>
+                </nav>
             </div>
-            <nav>
-                <a href="index.html#home">HOME</a>
-                <a href="index.html#music">MUSIC</a>
-                <a href="index.html#council">THE COUNCIL</a>
-                <a href="index.html#novel">GRAPHIC NOVEL</a>
-                <a href="digi-awards.html" class="active">DIGI AWARDS</a>
-                <a href="index.html#about">ABOUT</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div style="display:flex; gap:28px; align-items:center; justify-content:center; flex-wrap:wrap;">
-                <img src="images/digi-it-logo.png" alt="DIGI It" style="max-width:220px; width:100%; height:auto;">
-                <div style="min-width:280px; max-width:680px;">
-                    <h2>THE DIGI AWARDS</h2>
-                    <p class="hero-text">D.I.G.I. creation recognized. Process respected. Culture documented.</p>
-                    <p class="hero-subtext">
-                        D.I.G.I. means <strong>Directed · Inventive · Guided · Inspiration</strong>.<br>
-                        Not how much AI was used — but how it was guided.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#submit" class="btn-primary">SUBMIT A LINK</a>
-                        <a href="#rules" class="btn-secondary">READ THE RULES</a>
+        </header>
+        <main id="main">
+            <section class="page-intro wrap">
+                <p class="eyebrow">Recognition program in development</p>
+                <h1>The choices<br>behind the creation.</h1>
+                <p class="lead">The Digi Awards recognize intentional digital creation, with attention to the decisions, iterations and craft that shape a finished work.</p>
+            </section>
+            <section class="wrap digi-definition">
+                <p class="digi-word">D.I.G.I.</p>
+                <p>Directed · Inventive · Guided · Inspiration</p>
+            </section>
+            <section class="section wrap">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">The idea</p>
+                        <h2>Show the work.<br>Share the process.</h2>
                     </div>
+                    <p>Digital and generative tools can be part of the process in many ways. D.I.G.I. asks creators to describe their contribution, the tools they used and the choices they made.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dark-section">
-        <div class="container">
-            <h2>WHAT IS D.I.G.I.?</h2>
-            <p style="max-width:900px; margin:0 auto; line-height:1.8;">
-                <strong>D.I.G.I.</strong> is the practice of human-led creation using digital and generative tools with intention,
-                restraint, and direction. It recognizes inspiration as real, tools as powerful, and guidance as the deciding factor
-                between noise and craft. Whether AI is used minimally or extensively, D.I.G.I. values transparency, taste, and authorship
-                through steering — not outsourcing. Some call it digitally inventive creation. Others call it divinely inspired guidance.
-                We ask one thing: <em>was the inspiration guided into something worth finishing?</em>
-            </p>
-        </div>
-    </section>
-
-    <section class="music-section">
-        <div class="container">
-            <h2>CATEGORIES</h2>
-            <div class="album-category">
-                <div class="track-grid">
-                    <div class="track">Best Song</div>
-                    <div class="track">Best Music Video</div>
-                    <div class="track">Best Genre Fusion</div>
-                    <div class="track">Best Satire Track</div>
-                    <div class="track">Most Creative Prompting</strong></div>
-                    <div class="track"><strong>Least AI Assistance (Documentable)</strong></div>
-                    <div class="track"><strong>Most AI Assistance (Documentable)</strong></div>
-                    <div class="track"><strong>Most Efficient Prompting</strong></div>
-                    <div class="track">Experimental / Boundary Pusher</div>
-                    <div class="track">Community Choice</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="rules" class="dark-section">
-        <div class="container">
-            <h2>RULES (SIMPLE & REAL)</h2>
-            <div style="max-width:900px; margin:0 auto;">
-                <ul style="line-height:1.9;">
-                    <li>Original work only. You own it or have permission to submit it.</li>
-                    <li>Link-based submissions (YouTube, Suno, SoundCloud, etc.).</li>
-                    <li>Digital or generative submissions only. <strong>Document your process.</strong></li>
-                    <li>No hate content. No spam dumping. Keep it human.</li>
+                <h3>Planned categories</h3>
+                <ul class="category-list">
+                    <li>Best Song</li>
+                    <li>Best Music Video</li>
+                    <li>Best Genre Fusion</li>
+                    <li>Best Satire Track</li>
+                    <li>Most Creative Prompting</li>
+                    <li>Least AI Assistance (Documentable)</li>
+                    <li>Most AI Assistance (Documentable)</li>
+                    <li>Most Efficient Prompting</li>
+                    <li>Experimental / Boundary Pusher</li>
+                    <li>Community Choice</li>
                 </ul>
-                <p style="opacity:.9; margin-top:18px;">
-                    D.I.G.I. doesn’t ask <em>if</em> AI was involved. It asks whether inspiration was guided into something finished,
-                    intentional, and worth sharing.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="submit" class="about-section">
-        <div class="container">
-            <h2>SUBMIT YOUR ENTRY</h2>
-            <p style="max-width:900px; margin:0 auto 26px; line-height:1.8;">
-                For now, submissions are link-based. Use the template below (copy/paste) and send it to your Digi intake method.
-                If you’re using a Google Form, link it here and replace the placeholder button.
-            </p>
-
-            <div class="about-content">
-                <div class="about-block">
-                    <h3>Submission Template</h3>
-                    <p><strong>Title:</strong> </p>
-                    <p><strong>Creator Name(s):</strong> </p>
-                    <p><strong>Category:</strong> </p>
-                    <p><strong>Public Link:</strong> </p>
-                    <p><strong>D.I.G.I. Statement (short):</strong> Tools used + what you guided/decided</p>
-                    <p><strong>Promptcraft (optional):</strong> Prompt(s) + iteration count</p>
+            </section>
+            <section id="rules" class="section worlds">
+                <div class="wrap prose">
+                    <p class="eyebrow">Entry preparation</p>
+                    <h2>Keep the process visible.</h2>
+                    <ul class="plain-list">
+                        <li>Submit original work you own or have permission to enter.</li>
+                        <li>Use a public work link and credit collaborators.</li>
+                        <li>Describe the digital or generative tools used and your creative decisions.</li>
+                        <li>Include prompts and iteration notes where useful.</li>
+                        <li>Keep entries free of hate content and spam.</li>
+                    </ul>
+                    <p>Categories and entry guidance are being developed. An opening date, judging schedule and submission destination have yet to be announced.</p>
                 </div>
-
-                <div class="about-block">
-                    <h3>Submission Method</h3>
-                    <p><strong>Option A (fast):</strong> Email submissions</p>
-                    <p>Replace this with your real email on the page when ready.</p>
-                    <p><strong>Option B (recommended):</strong> Google Form</p>
-                    <a href="#" class="btn-primary" style="display:inline-block; margin-top:10px;">OPEN SUBMISSION FORM</a>
+            </section>
+            <section id="submit" class="section wrap">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Prepare for entry</p>
+                        <h2>Keep a draft ready.</h2>
+                    </div>
+                    <p>This form prepares a text file on your device. Downloading a draft does not submit it to ETS. Entries are not being accepted through this site yet.</p>
+                </div>
+                <form id="entry-form" class="entry-form">
+                    <div class="field">
+                        <label for="entry-title">Work title</label>
+                        <input id="entry-title" name="title" required maxlength="200" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="entry-creator">Creator name(s)</label>
+                        <input id="entry-creator" name="creator" required maxlength="200" autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="entry-category">Category</label>
+                        <select id="entry-category" name="category">
+                            <option>Best Song</option>
+                            <option>Best Music Video</option>
+                            <option>Best Genre Fusion</option>
+                            <option>Best Satire Track</option>
+                            <option>Most Creative Prompting</option>
+                            <option>Least AI Assistance (Documentable)</option>
+                            <option>Most AI Assistance (Documentable)</option>
+                            <option>Most Efficient Prompting</option>
+                            <option>Experimental / Boundary Pusher</option>
+                            <option>Community Choice</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="entry-link">Public work link</label>
+                        <input id="entry-link" name="link" type="url" required placeholder="https://" maxlength="2048">
+                    </div>
+                    <div class="field full">
+                        <label for="entry-process">Your D.I.G.I. statement</label>
+                        <textarea id="entry-process" name="process" required rows="5" maxlength="10000" placeholder="Tools used, decisions made and how the work developed"></textarea>
+                    </div>
+                    <div class="field full">
+                        <label for="entry-prompts">Prompts and iteration notes (optional)</label>
+                        <textarea id="entry-prompts" name="prompts" rows="3" maxlength="20000"></textarea>
+                    </div>
+                    <div class="full actions">
+                        <button class="button" type="submit">Download entry draft</button>
+                        <p id="entry-status" role="status" class="quiet"></p>
+                    </div>
+                    <noscript>
+                        <p class="full">JavaScript is needed to download a draft. You can copy your answers into a text file instead.</p>
+                    </noscript>
+                </form>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="wrap footer-top">
+                <a class="brand" href="index.html">
+                    <span class="brand-name">ECHO<span>TIER</span>
+                    </span>
+                    <span class="brand-small">STUDIOS</span>
+                </a>
+                <p>Technology That Liberates.</p>
+                <div class="footer-links">
+                    <a href="https://suno.com/@michiganbigb" target="_blank" rel="noopener noreferrer">TRF on Suno</a>
+                    <a href="studio.html#about">About ETS</a>
+                    <a href="https://github.com/MichiganBigB/echotierstudios" target="_blank" rel="noopener noreferrer">Studio source</a>
                 </div>
             </div>
-
-            <p class="coming-soon" style="margin-top:30px;">
-                Winners receive D.I.G.I. certification badges used across ETS.com, features, and spotlight posts.
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 EchoTier Studios. Baldwin, Michigan.</p>
-            <p class="footer-tagline">Experiences, Not Agreements. The Spiral, Not The Feed.</p>
-            <p class="footer-tagline">D.I.G.I. = Directed · Inventive · Guided · Inspiration</p>
-        </div>
-    </footer>
-</body>
+            <div class="wrap footer-bottom">
+                <span>© 2026 EchoTier Studios · Baldwin, Michigan</span>
+                <span>Human imagination. Digital craft.</span>
+            </div>
+        </footer>
+    </body>
 </html>

@@ -38,7 +38,7 @@ nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
 nav a { font-size: .875rem; text-decoration: none; padding-block: .65rem; color: var(--muted); }
 nav a:hover, nav a[aria-current] { color: var(--gold); }
 nav a[aria-current] { box-shadow: 0 2px var(--gold); }
-.menu-toggle { background: transparent; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); padding: .5rem .8rem; }
+.menu-toggle { display: none; background: transparent; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); padding: .5rem .8rem; }
 .hero { position: relative; min-height: 740px; min-height: min(820px, 90svh); isolation: isolate; display: flex; flex-direction: column; justify-content: center; }
 .hero-image, .hero-shade { position: absolute; inset: 0; height: 100%; z-index: -2; }
 .hero-image { object-fit: cover; object-position: center; }
